@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiURL = "https://one0x-feb-23-node-todo-api.onrender.com/api/todo";
+
+const apiURL = "https://sujit-feb10x-node-todo-app.onrender.com/api/todo";
 
 export function getTasks() {
   return axios.get(apiURL + "s");
@@ -19,15 +20,15 @@ export async function addTask(task) {
 }
 
 export async function updateTask(id, task) {
-    try {
-        let response;
-        await axios.put(apiURL + "/" + id + "/update", task).then((res) => {
-          response = res.data;
-        });
-        return response;
-      } catch (error) {
-        console.error("ERROR:-" + error.message);
-      }
+  try {
+    let response;
+    await axios.put(apiURL + "/" + id + "/update", task).then((res) => {
+      response = res.data;
+    });
+    return response;
+  } catch (error) {
+    console.error("ERROR:-" + error.message);
+  }
 }
 
 export function deleteTask(id) {
