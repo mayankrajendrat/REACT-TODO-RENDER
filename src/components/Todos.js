@@ -33,8 +33,8 @@ const Todos = (props) => {
       alert("Input is Empty");
     } else {
       let apiResponse;
-      addTask({"task":todo}).then(res=>{
-        apiResponse=res.task;
+      addTask({ "task": todo }).then(res => {
+        apiResponse = res.task;
         props.addTodo({
           id: apiResponse["_id"],
           item: apiResponse["task"],
